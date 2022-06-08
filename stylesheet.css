@@ -1,0 +1,57 @@
+/* General Style */
+nav a:visited,
+nav a:link{
+    color: rgb(0, 4, 255);
+    text-decoration: none;
+}
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;    
+}
+
+
+/* CSS Grid layout */
+html, body{
+    height:100%;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin: 1em;
+}
+
+header,
+main,
+nav,
+footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#introduction{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#features{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
