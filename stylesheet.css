@@ -1,57 +1,239 @@
 /* General Styling */
-nav a:visited,
-nav a:link{
-    color: rgb(0, 4, 255);
-    text-decoration: none;
-}
 
-nav > ul{
-    display: inline;
+* {
     padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-nav > ul > li{
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #85dcb8;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.branding-logo {
+    height: 100px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.branding-title {
+    color: #85dcb8;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styling for social media icons */
+.social-media-icons {}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-facebook {
+    color: black;
+}
+
+.fa-instagram {
+    color: black;
+}
+
+.fa-linkedin {
+    color: black;
+}
+
+.fa-github {
+    color: black;
+}
+
+
+.navbar-links>ul>.social-media-icons {
+    display: none;
+}
+
+.navbar-links>ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.navbar-links>ul>li {
     display: inline-block;
-    list-style: none;
+    line-height: 35px;
     margin: 0 5px 0 5px;
 }
 
-.logo{
-    height: 75px;
-    width: 75px;    
+.navbar-links>ul>li>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    display: block;
 }
 
-.services{
+a.active,
+.navbar-links>ul>li>a:hover {
+    background-color: #41b3a3;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 0.1rem;
+
+}
+
+.hamburger-btn {
+    margin: .5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger-btn>.bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+@media(max-width: 547px) {
+
+    header>.social-media-icons {
+        display: none;
+    }
+
+    .navbar-links>ul>.social-media-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* .logo>ul>li {
+        display: flex
+    }
+
+    .branding-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .branding-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-links>ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links>ul>li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-links>ul>li>a {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.services {
     display: grid;
     grid-column: span 3;
     justify-items: center;
     align-items: center;
 }
 
-.services img{
+.services img {
     height: 100%;
     width: 75%;
 }
-.services p{
+
+.services img:hover {
+    opacity: 0.50;
+}
+
+.services p {
     font-weight: bold;
 }
 
-#promos img{
+#promos img {
     height: 50%;
     width: 75%;
 }
-#promos p{
+
+#promos p {
     font-weight: bold;
-    
+
 }
 
 /* CSS Grid layout */
 
-html, body{
-    height:100%;
+html,
+body {
+    height: 100%;
 }
 
-body{
+body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1em;
@@ -61,21 +243,22 @@ body{
 header,
 nav,
 main,
-footer{
+footer {
     grid-column-start: 1;
     grid-column-end: 13;
 }
 
-.index-main{
+.index-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
-#introduction{
+#introduction {
     grid-column-start: 1;
     grid-column-end: 13;
 }
-#promos{
+
+#promos {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 13;
