@@ -51,14 +51,14 @@
     </nav>
     <main class="contact-us-main">
 
-        <div>
+        <!-- <div>
             <h3>Contact Us</h1>
 
                 <p><a href="mailto:pawspawspaws@nkydogsitter.com?subject=Interested%20in%20booking%20a%20sitter">Send
                         us
                         an
                         email </a>and let us know how we can help!</p>
-        </div>
+        </div> -->
         <div class="container">
             <form onsubmit="sendEmail(); reset(); return false;">
                 <input type="text" id="fName" placeholder="First Name" required>
@@ -75,9 +75,10 @@
                     <option>Training</option>
                 </select>
                 <label for="start">Start date:</label>
-                <input type="date" id="start" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
+                <input type="date" id="startDate" name="trip-start" value="yyyy-mm-dd" min="2022-07-31"
+                    max="2023-07-31">
                 <label for="end">End date:</label>
-                <input type="date" id="start" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
+                <input type="date" id="endDate" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
                 <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
                 <button type="submit">Submit</button>
 
@@ -97,6 +98,7 @@
                 id="footer-linkedin-icon"></a>
         </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 
