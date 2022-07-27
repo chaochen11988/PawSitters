@@ -7,6 +7,7 @@ hamburgerButton.addEventListener("click", () => {
 
 function sendEmail() {
     Email.send({
+        //working progress//
         Host: "smtp.gmail.com",
         Username: "chaochen11988testing@gmail.com",
         Password: "ruL7iU8aZSFd4F5",

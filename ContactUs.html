@@ -18,7 +18,7 @@
                 <li><a href="Index.html" class="branding-title"> Paw Sitter </a></li>
             </ul>
         </div>
-        <div class="social-media-icons">
+        <div class="social-media-icons" id="media-query-social-media-icons">
             <a href="images/workinprogress.png" class="fa fa-instagram" id="header-instagram-icon"></a>
             <a href="images/workinprogress.png" class="fa fa-facebook" id="header-facebook-icon"></a>
             <a href="images/workinprogress.png" class="fa fa-twitter" id="header-twitter-icon"></a>
@@ -50,13 +50,39 @@
         </div>
     </nav>
     <main class="contact-us-main">
-        <h3>Contact Us</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat exercitationem eius
-                consequuntur quae eum.</p>
-            <p><a href="mailto:pawspawspaws@nkydogsitter.com?subject=Interested%20in%20booking%20a%20sitter">Send us
-                    an
-                    email </a>and let us know how we can help!</p>
 
+        <div>
+            <h3>Contact Us</h1>
+
+                <p><a href="mailto:pawspawspaws@nkydogsitter.com?subject=Interested%20in%20booking%20a%20sitter">Send
+                        us
+                        an
+                        email </a>and let us know how we can help!</p>
+        </div>
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" id="fName" placeholder="First Name" required>
+                <input type="text" id="lName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <select name="services" id="contact-us-services" required>
+                    <option value="" disabled selected>Select your service</option>
+                    <option>Boarding</option>
+                    <option>Dog Walking</option>
+                    <option>House Sitting</option>
+                    <option>Drop-In Visits</option>
+                    <option>Pet Taxi</option>
+                    <option>Training</option>
+                </select>
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
+                <label for="end">End date:</label>
+                <input type="date" id="start" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
+                <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
     </main>
     <footer>
         <div class="page-bottom">
