@@ -17,7 +17,7 @@ function sendEmail() {
             "<br> Last name: " + document.getElementById("lName").value +
             "<br> Email address: " + document.getElementById("email").value +
             "<br> Phone number: " + document.getElementById("phone").value +
-            "<br> Message: " + document.getElementById("message").value +
+            "<br> Message: " + document.getElementById("message").value
     }).then(
         message => alert("Email Sent Successfully")
     );
