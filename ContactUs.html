@@ -50,7 +50,6 @@
         </div>
     </nav>
     <main class="contact-us-main">
-
         <!-- <div>
             <h3>Contact Us</h1>
 
@@ -60,10 +59,10 @@
                         email </a>and let us know how we can help!</p>
         </div> -->
         <div class="container">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form onsubmit="sendEmail(); return false;">
                 <input type="text" id="fName" placeholder="First Name" required>
                 <input type="text" id="lName" placeholder="Last Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="email" placeholder="Email Address" required>
                 <input type="text" id="phone" placeholder="Phone Number" required>
                 <select name="services" id="contact-us-services" required>
                     <option value="" disabled selected>Select your service</option>
@@ -81,7 +80,6 @@
                 <input type="date" id="endDate" name="trip-start" value="yyyy-mm-dd" min="2022-07-31" max="2023-07-31">
                 <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
                 <button type="submit">Submit</button>
-
             </form>
         </div>
     </main>
