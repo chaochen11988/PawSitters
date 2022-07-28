@@ -8,7 +8,7 @@ hamburgerButton.addEventListener("click", () => {
 function sendEmail() {
     let inputFName = document.getElementById("fName").value;
     if (!document.getElementById("email").value.includes("@")) {
-        alert("Email address field must contain @ sign, please input a valid email.");
+        alert("Email address field must contain @ sign, please input a valid email address.");
     } else {
         Email.send({
             //working progress//

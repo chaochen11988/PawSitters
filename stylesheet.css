@@ -13,8 +13,8 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
-    margin: 1em;
+    /* grid-gap: 1em;
+    margin: 1em; */
 }
 
 header,
@@ -40,21 +40,73 @@ header {
     justify-content: space-between;
 }
 
-.navbar {
+/* new code */
+#media-query-social-media-icons {
+    display: none;
+}
+
+/* .navbar-links>ul>.social-media-icons {
     display: flex;
     justify-content: center;
+} */
+
+header {
+    justify-content: center;
     align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     background: #85dcb8;
     color: white;
 }
 
+.navbar-links {
+    display: none;
+    width: 100%;
+}
+
+.navbar-links>ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .navbar-links>ul>li {
+    display: flex;
+    justify-content: center;
+} */
+
+/* .navbar-links>ul>li>a {
+    padding: 0.5rem 1rem;
+
+} */
+
+.navbar-links.active {
+    display: flex;
+}
+
+/* end of new code */
+
+
 .logo {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
+    /* padding-left: 30px; */
+}
+
+.logo>ul>li {
+    display: flex;
+    justify-content: center;
 }
 
 .branding-logo {
+    display: flex;
     height: 100px;
     width: 120px;
     justify-content: center;
@@ -62,6 +114,7 @@ header {
 }
 
 .branding-title {
+    display: flex;
     color: #85dcb8;
     font-size: 2rem;
     font-weight: bold;
@@ -119,8 +172,6 @@ header {
     width: 60px;
     color: #4267b2;
     grid-column: 2 / 2;
-
-
 }
 
 #header-twitter-icon {
@@ -142,8 +193,6 @@ header {
 /* end of header icon styling *
 
 
-
-
 /*grid styling for social media icon*/
 .social-media-icons {
     display: grid;
@@ -160,18 +209,6 @@ header {
 }
 
 /*end of grid styling for social media icon*/
-
-
-.navbar-links>ul>.social-media-icons {
-    display: none;
-}
-
-.navbar-links>ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-
-}
 
 .navbar-links>ul>li {
     display: inline-block;
@@ -199,7 +236,9 @@ a.active,
 
 .hamburger-btn {
     margin: .5rem;
-    display: none;
+    /* display: none; */
+    /* new code */
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -215,8 +254,8 @@ a.active,
 
 #services-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px 0 20px 0;
 }
 
 .services {
@@ -225,17 +264,37 @@ a.active,
     justify-items: center;
     justify-content: center;
     margin: 10px;
-
 }
+
+.services h2 {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* #services-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+} */
+
+/* .services {
+    display: grid;
+    grid-template-rows: 240px auto;
+    justify-items: center;
+    justify-content: center;
+    margin: 10px;
+
+} */
 
 .services img {
     height: 240px;
     width: 300px;
     border-radius: 15%;
-
 }
-
-
 
 .services img:hover {
     opacity: 0.50;
@@ -243,14 +302,7 @@ a.active,
 
 .services p {
     font-weight: bold;
-
-}
-
-.services h2 {
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: flex-start;
+    width: 300px;
 }
 
 .services figcaption {
@@ -258,7 +310,6 @@ a.active,
     grid-template-rows: min-content min-content auto min-content;
     height: 100%;
 }
-
 
 #footer-github-icon {
     font-size: 40px;
@@ -278,7 +329,6 @@ a.active,
 
 footer {
     background-color: #85dcb8;
-
 }
 
 .page-bottom {
@@ -289,12 +339,11 @@ footer {
 
 footer>.social-media-icons {
     justify-content: center;
-
 }
 
 
 
-/* styling for feedback container */
+/* styling for form/container */
 .container {
     width: 100%;
     background: #fff;
@@ -354,8 +403,12 @@ figcaption button {
     border-radius: 30px;
 }
 
-/* @media screen and (min-width: 440px) {
+/* end of styling for form/container */
 
+
+@media screen and (min-width: 361px) {}
+
+@media screen and (min-width: 640px) {
 
     header {
         display: flex;
@@ -364,12 +417,28 @@ figcaption button {
         align-items: center;
     }
 
-    header>.social-media-icons {
+    .hamburger-btn {
+        display: none;
+    }
+
+    .navbar-links {
         display: flex;
+    }
+
+    .navbar-links>ul {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10px;
+    }
+
+    #media-query-social-media-icons {
+        display: flex;
+    }
+
+    .social-media-icons {
+        display: none;
+    }
+
+    footer>.social-media-icons {
+        display: grid;
     }
 
     #header-instagram-icon {
@@ -396,140 +465,64 @@ figcaption button {
         font-size: 30px;
     }
 
-    .logo {
-        padding: 0;
-    }
-
-    .branding-logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar-links {
-        display: flex;
-    }
-
-    .navbar-links>ul {
-        width: 100%;
-    }
-
-    .navbar-links>ul>li {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-links>ul>li>a {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
     #services-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .services {
-        display: grid;
-        justify-items: center;
-    }
-
-    .services h2 {
-        width: 100%;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .services p {
-        font-weight: bold;
-        width: 300px;
+        max-width: 800px;
     }
 
 }
 
-@media screen and (min-width: 820px) {
-    #media-query-social-media-icons {
-        display: none;
-    }
-
-    .navbar-links>ul>.social-media-icons {
-        display: flex;
-        justify-content: center;
-    }
-
-    .branding-logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (min-width: 1007px) {
 
     header {
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .hamburger-btn {
-        display: flex;
+    .logo {
+        padding-left: 20px;
     }
 
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .navbar-links>ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links>ul>li {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-links>ul>li>a {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    #services-section {
+    #media-query-social-media-icons {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+
     }
 
-    .services {
+    #header-instagram-icon {
+        font-size: 40px;
+    }
+
+    #header-facebook-icon {
+        font-size: 40px;
+    }
+
+    #header-twitter-icon {
+        font-size: 40px;
+    }
+
+    #header-youtube-icon {
+        font-size: 40px;
+    }
+
+    #footer-linkedin-icon {
+        font-size: 40px;
+    }
+
+    #footer-github-icon {
+        font-size: 40px;
+    }
+
+    .index-main>#services-section {
         display: grid;
-        justify-items: center;
-    }
+        grid-template-columns: repeat(3, 1fr);
 
-    .services h2 {
-        width: 100%;
-        display: grid;
-        justify-content: center;
-        align-items: center;
     }
+}
 
-    .services p {
-        width: 300px;
-    }
-} */
 
-/* end of styling for feedback container */
-@media(max-width: 820px) {
+
+/* @media(max-width: 820px) {
 
     header {
         display: flex;
@@ -702,4 +695,4 @@ figcaption button {
     .services p {
         width: 300px;
     }
-}
+} */
