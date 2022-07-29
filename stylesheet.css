@@ -39,6 +39,11 @@ header {
     justify-content: space-between;
 }
 
+#introduction {
+    padding: 20px;
+    font-size: 1rem;
+
+}
 
 #media-query-social-media-icons {
     display: none;
@@ -242,6 +247,9 @@ a.active,
     justify-items: center;
     justify-content: center;
     margin: 10px;
+    background-color: #c8efe9;
+    border-radius: 30px;
+    padding: 20px;
 }
 
 .services h2 {
@@ -255,7 +263,7 @@ a.active,
 .services img {
     height: 240px;
     width: 300px;
-    border-radius: 15%;
+    border-radius: 30px;
 }
 
 .services img:hover {
