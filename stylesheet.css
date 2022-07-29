@@ -451,52 +451,52 @@ figcaption button:hover {
         grid-template-columns: repeat(2, min-content);
         justify-content: space-evenly;
     }
+}
 
 
+@media screen and (min-width: 1007px) {
 
-    @media screen and (min-width: 1007px) {
-
-        header {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .logo {
-            padding-left: 20px;
-        }
-
-        #media-query-social-media-icons {
-            display: grid;
-
-        }
-
-        #header-instagram-icon {
-            font-size: 50px;
-        }
-
-        #header-facebook-icon {
-            font-size: 50px;
-        }
-
-        #header-twitter-icon {
-            font-size: 50px;
-        }
-
-        #header-youtube-icon {
-            font-size: 50px;
-        }
-
-        #footer-linkedin-icon {
-            font-size: 50px;
-        }
-
-        #footer-github-icon {
-            font-size: 50px;
-        }
-
-        .index-main>#services-section {
-            display: grid;
-            grid-template-columns: repeat(3, min-content);
-            justify-content: space-evenly;
-        }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
     }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    #media-query-social-media-icons {
+        display: grid;
+
+    }
+
+    #header-instagram-icon {
+        font-size: 50px;
+    }
+
+    #header-facebook-icon {
+        font-size: 50px;
+    }
+
+    #header-twitter-icon {
+        font-size: 50px;
+    }
+
+    #header-youtube-icon {
+        font-size: 50px;
+    }
+
+    #footer-linkedin-icon {
+        font-size: 50px;
+    }
+
+    #footer-github-icon {
+        font-size: 50px;
+    }
+
+    .index-main>#services-section {
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        justify-content: space-evenly;
+    }
+}
