@@ -5,7 +5,7 @@ Hi there! My name is Chao, a novice Front-End Web Developer currently working wi
 My website, PawSitters, is a fictional business website composed of HTML, CSS, and JavaScript. 
 
 To begin, start by opening the index.html file with a code editer such as Visual Studio Code and preview in a live server. The requirements for the capstone project is listed below:
-- 2 media queries that adjusts website layout and improve user experience
+- 2 media queries which adjusts website layout and improve user experience
 - Minimum of 5 GitGub repository commits
 - Includes a README file
 - Minimum of 3 features from the CSS and JavaScript list:
