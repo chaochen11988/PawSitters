@@ -50,16 +50,8 @@
         </div>
     </nav>
     <main class="contact-us-main">
-        <!-- <div>
-            <h3>Contact Us</h1>
-
-                <p><a href="mailto:pawspawspaws@nkydogsitter.com?subject=Interested%20in%20booking%20a%20sitter">Send
-                        us
-                        an
-                        email </a>and let us know how we can help!</p>
-        </div> -->
         <div class="container">
-            <form onsubmit="sendEmail(); return false;">
+            <form onsubmit="sendEmail(); reset() return false;">
                 <input type="text" id="fName" placeholder="First Name" required>
                 <input type="text" id="lName" placeholder="Last Name" required>
                 <input type="text" id="email" placeholder="Email Address" required>
