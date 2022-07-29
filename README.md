@@ -9,7 +9,7 @@ To begin, start by opening the index.html file with a code editer such as Visual
 - Minimum of 5 GitGub repository commits
 - Includes a README file
 - Minimum of 3 features from the CSS and JavaScript list:
-  - CSS requirement: A hamburger style navigation bar that utilizes CSS to displays at a min-width of 640px and JavaScript to opens and collapses on click.
+  - CSS requirement: A hamburger style navigation bar that utilizes CSS to displays at a width of 640px and lower and JavaScript to opens and collapses on click.
   - CSS requirement: Utilized CSS Grid properties to reorganize the services container on homepage based on media size. Reorganize social media icons in header from CSS Grid to Flex Box based on media size.
   - JavaScript requirement: A Contact Us form that utilizes CSS for styling and JavaScipt for email input validation and consoles an alert for successful or unsucessful submissions.
   
